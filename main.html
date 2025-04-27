@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Водный баланс</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body class="main-page">
+    <header>
+        <div class="logo-small">
+            <img class="water-drop" src="1.png" alt="Фото">
+            <h1>Водный баланс</h1>
+        </div>
+    </header>
+    
+    <main>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div id="waterAmount" class="water-amount">0 / 2000 мл</div>
+        
+        <div class="buttons">
+            <button onclick="addWater(250)" class="water-button">
+                <span>+250мл</span>
+                <svg viewBox="0 0 100 100" width="20" height="20">
+                    <path d="M50 15 Q30 40 50 85 Q70 40 50 15" fill="white" />
+                </svg>
+            </button>
+            <button onclick="addWater(500)" class="water-button">
+                <span>+500мл</span>
+                <svg viewBox="0 0 100 100" width="20" height="20">
+                    <path d="M50 15 Q30 40 50 85 Q70 40 50 15" fill="white" />
+                </svg>
+            </button>
+        </div>
+        
+        <div class="custom-input">
+            <input type="number" id="customAmount" placeholder="Введите объем в мл">
+            <button onclick="addCustomWater()" class="custom-button">Добавить</button>
+        </div>
+        
+        <div class="history">
+            <h3>История потребления:</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </main>
+    
+    <script src="js.js"></script>
+</body>
+</html>
